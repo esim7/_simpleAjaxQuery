@@ -39,11 +39,15 @@
 @section scripts
 {
     <script>
+        onFailed = () => {
+            alert("failed");
+        }
+
         onComplete = () => {
             $.ajax({
                 type: "GET",
                 url: "/Books/_PrintBooks",
-                success: function (res) {
+                success: function(res) {
                     //$("#booksTable").html(res);
                     document.querySelector("#booksTable").innerHTML = res;
                 }
