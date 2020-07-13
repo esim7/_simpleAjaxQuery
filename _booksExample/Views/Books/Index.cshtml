@@ -44,7 +44,8 @@
                 type: "GET",
                 url: "/Books/_PrintBooks",
                 success: function (res) {
-                    $("#booksTable").html(res);
+                    //$("#booksTable").html(res);
+                    document.querySelector("#booksTable").innerHTML = res;
                 }
             });
         }
